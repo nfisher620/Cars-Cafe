@@ -45,21 +45,18 @@ html{
 .stats{
     display:inline-block;
     float:left;
-    position:relative;
-    bottom:0px;
+    position:absolute;
+    bottom:75px;
     left:20px;
 }
-body{
-    margin:auto;
-}
-.game_area{
-    height: 35vh;
-    width:35vw;
-    background-color:gray;
+.game-area{
+    width:750px;
+    position:relative;
 }
 .back{
     width:100%;
     height:100%;
+    float:left;
 }
 .front{
     width:100%;
@@ -67,25 +64,15 @@ body{
     position:absolute;
     transform:rotateY(180deg);
     backface-visibility: hidden;
+    float:left;
 }
 .card{
     width:100px;
     height:100px;
-    perspective: 1000;
-    transform-style: preserve-3d;
-    transition: all 1.0s linear;
     display:inline-block;
+    position:relative;
     border:5px ridge white;
-}
-.container:hover .card {
-    transform: rotateY(180deg);
-}
-.container{
-    display:inline;
     margin:5px;
-}
-.row{
-    margin:20px 0px 20px 15px;
 }
 p{
     color: white;
@@ -99,7 +86,7 @@ li{
     text-align: center;
     color: white;
     font-size: 15px;
-    font-family: tahoma;
+    font-family:tahoma;
 }
 h4 {
     position: relative;
