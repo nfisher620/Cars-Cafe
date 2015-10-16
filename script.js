@@ -29,6 +29,7 @@ function card_clicked(element) {
         }
         else {
             console.log("cards don't match");
+            //there is no match
             //$(".selected_card").removeClass("selected_card");
             first_card_clicked = null;
             second_card_clicked = null;
@@ -38,7 +39,8 @@ function card_clicked(element) {
         }
         if (match_counter == total_possible_matches) {
             //all matches have been made
-            console.log("Congratulations you won the Piston Cup!");
+            $('#game-area').find('.card').addClass('hide_matched_cards');
+            alert("Congratulations you won the Piston Cup!");
             }
         }
 }
