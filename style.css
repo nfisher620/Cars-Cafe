@@ -1,0 +1,186 @@
+header{
+    display:inline-block;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
+a{
+    color:white;
+    text-shadow: 7px 7px 7px red;
+    display:block;
+    font-family: 'Marck Script', cursive;
+    font-size:20px;
+    padding-left:15px;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+}
+h1{
+    color:white;
+    text-shadow: 7px 7px 7px red;
+    display:inline;
+    font-family: 'Marck Script', cursive;
+    font-size:5vw;
+    position:absolute;
+    right:6%;
+    top:25%;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+h2{
+    color:white;
+    text-shadow: 7px 7px 7px red;
+    display:inline;
+    font-family: 'Marck Script', cursive;
+    font-size:20px;
+}
+body{
+    background:url(images/cars_28.jpg)
+    no-repeat center center fixed;
+    background-size: cover;
+}
+.stats{
+    display:inline-block;
+    position:absolute;
+    bottom:45px;
+    left:20px;
+    width:30%;
+}
+#game-area{
+    width:750px;
+    position:relative;
+}
+.back{
+    width:100%;
+    height:100%;
+    float:left;
+    position:absolute;
+}
+.front{
+    width:100%;
+    height:100%;
+    position:absolute;
+    float:left;
+}
+.card{
+    width:100px;
+    height:100px;
+    display:inline-block;
+    position:relative;
+    border:5px ridge white;
+    margin:5px;
+}
+p{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top:10px;
+    font-family:tahoma;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family:tahoma;
+}
+h4 {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 7px 7px 7px black;
+    font-family: 'Marck Script', cursive;
+    font-size: 25px;
+    margin:0px;
+    padding-top:5px;
+}
+.block{
+    float:left;
+    width:400px;
+    height:150px;
+    background-color:#e74c3c;
+    margin: -20px 80px;
+    border:5px outset black;
+    box-shadow: 10px 10px,-10px -10px #f4f4f4, 0px 0px 5px 5px
+}
+button{
+    background:url(images/logo.png);
+    color:white;
+    font-family: 'Marck Script', cursive;
+    border:none;
+    left:-5px;
+    bottom:8px;
+    position:relative;
+    font-size:12px;
+    background-size:100% 100%;
+    height:65px;
+    background-position-y:4px;
+    padding:7px;
+    box-sizing:border-box;
+    background-repeat: no-repeat;
+    width:95px;
+}
+.buttonpic{
+    height:100px;
+    width:110px;
+    position:absolute;
+    bottom:55px;
+    left:0px;
+    z-index: -5;
+}
+
+.selected_card{
+    display:none;
+}
+.matched_card {
+    display:none;
+}
+
+@-webkit-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+}
+@media screen and (min-width:0px) and (max-width:950px){
+    .stats{
+        display:inline-block;
+        position:relative;
+    }
+}
+@media screen and (max-width:950px){
+    header{
+        display:inline-block;
+        position:absolute;
+    }
+
+}
+@media screen and (min-width:100px) and (max-width:1200px){
+    .stats div{
+        display:inline-block;
+        position:relative;
+        left:0px;
+        bottom:0px;
+        margin-left:15px;
+        font-size:20px;
+    }
+    .front{
+        height:100%;
+        width:100%;
+    }
+    .back{
+        height:100%;
+        width:100%;
+    }
+    .card{
+        height:10vh;
+        width:10vw;
+    }
+    #game-area{
+        height:75vh;
+        width:75vw;
+    }
+
+}
