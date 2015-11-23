@@ -41,6 +41,24 @@ function difficult (){
     sheriff.play();
 
 }
+function rf() {
+    $(".rascalFlatts").toggle(
+        function () {
+            $(".rascalFlatts").html("Racing Music");
+           $('#lifeHighway').play();
+            console.log("play");
+        },
+        function () {
+            $(".rascalFlatts").html("Pause Music");
+            $('#lifeHighway').pause();
+        }
+    );
+
+}
+
+
+
+
 
 function card_clicked(element) {
     //check if you can click on a card
@@ -111,7 +129,6 @@ function card_clicked(element) {
         $("body").css("background-image", "url(images/dark4.png)");
         $('#game-area').find('.card').addClass('hide_matched_cards');
         lights.play();
-        console.log(attempts);
     }
     if(matches==4){
         wake_up.play();
@@ -133,7 +150,6 @@ function display_stats() {
     else {
         $(".accuracy").find(".value").text(accuracy + "%");
     }
-    console.log("accuracy is" + accuracy + "%");
 }
 
 function reset_stats() {
