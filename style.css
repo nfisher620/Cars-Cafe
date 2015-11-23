@@ -38,6 +38,7 @@ h2{
      display:inline;
      font-family: 'Marck Script', cursive;
      font-size:124%;
+     margin-right:17px;
  }
 h5{
     display:inline;
@@ -82,7 +83,6 @@ body{
      display:inline-block;
      position:absolute;
      top:57vh;
-     left:3vw;
      width:63vw;
      height:3vh;
  }
@@ -165,7 +165,7 @@ button{
      position:relative;
      font-size:16px;
      background-size:100% 100%;
-     height:85px;
+     height:10vh;
      background-position-y:4px;
      box-sizing:border-box;
      background-repeat: no-repeat;
@@ -185,6 +185,8 @@ button{
     color:white;
     font-size:25px;
     display: block;
+    margin-left:-49px;
+    margin-right:-11px;
 }
 
 .selected_card {
@@ -205,28 +207,23 @@ audio{
 }
 #reset {
     left:25px;
-    margin-top:10px;
-}
-#rascalflatts {
-    color: white;
-    text-shadow: 7px 7px 7px red;
-    display: inline;
-    font-family: 'Marck Script', cursive;
-    font-size: 23px;
+    margin-top:4px;
 }
 
 .container2 {
-    width: 71vw;
+    width: 64vw;
 }
 #counter {
-    color: white;
+    color: whitesmoke;
     font-size: 100px;
-    width:10vw;
-    height:10vh;
+    font-family:"Marck Script", cursive;
+    text-shadow: 7px 7px 7px red;
+    width:9vw;
+    height:9vh;
     position:relative;
     float:right;
-    left:428px;
-    top:330px;
+    left:473px;
+    top:289px;
 }
 h6 {
     visibility: hidden;
@@ -353,12 +350,10 @@ h6 {
     #extras{
         width:71vw;
         top:2vh;
-        height:76vh;
         display: inline-block;
     }
     #reset{
         left:25px;
-        top:-57vh;
         height:13vh;
         width:49vw;
     }
@@ -387,9 +382,12 @@ h6 {
         height: 52vh;
         width: 57vw;
     }
+    .container2{
+        width:77vw;
+    }
 }
 
-@media screen and (min-width:400px) and (max-width:500px){
+@media screen and (min-width:400px) and (max-width:599px){
     #game-area{
         display:none;
     }
@@ -401,7 +399,7 @@ h6 {
 
     h6 {
         color: white;
-        font-size: 100px;
+        font-size: 77px;
         position: relative;
         visibility: visible;
     }

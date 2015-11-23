@@ -1,16 +1,15 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 9;
-var match_counter = 0;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
 var can_i_click_a_card = true;
-var random_picture = null;
-var difficulty="medium";
+var difficulty="easy";
 var card=null;
-
+var seconds=0;
+var timer;
 
 //the page has loaded
 $(document).ready(function () {
@@ -19,30 +18,25 @@ $(document).ready(function () {
     $(".attempts").find(".value").text(0);
     $("games_played").find(".value").text(0);
     random_pictures();
-    $("body").css("background-image", "url(images/dark2.png)");
     console.log("ready");
 });
-
-
+//button for easy game mode
 function easy(){
     difficulty="easy";
-    reset_stats();
-    $(".container").removeClass("container2");
-    $("body").css("background-image", "url(images/cars_28.jpg)");
+    addNewContainer();
     blazes.play();
 }
+
+//button for medium game ma
 function medium(){
     difficulty="medium";
-    reset_stats();
-    $(".container").removeClass("container2");
-    $("body").css("background-image", "url(images/dark2.png)");
+    addNewContainer();
     mater.play();
 }
 function difficult (){
     difficulty="difficult";
     reset_stats();
     $(".container").addClass("container2");
-    $("body").css("background-image", "url(images/dark4.png)");
     countdown();
     sheriff.play();
 
@@ -80,7 +74,7 @@ function card_clicked(element) {
             //resets cards to null
             first_card_clicked = null;
             second_card_clicked = null;
-            //increases matches and match_counter
+            //increases matches
             matches = matches + 1;
             console.log("cards match");
             accuracy = Math.round(((matches/attempts)*100).toFixed(2));
@@ -93,7 +87,6 @@ function card_clicked(element) {
             first_card_clicked = null;
             second_card_clicked = null;
             accuracy = Math.round(((matches/attempts)*100).toFixed(2));
-            //user clicks on a non_matched card which increases attempts_counter
             //adds one to attempts in the stats area
             $(".attempts").find(".value").text(attempts);
 
@@ -102,19 +95,18 @@ function card_clicked(element) {
                 $(".selected_card").removeClass("selected_card");
                 can_i_click_a_card = true;
             }, 1050);
-            console.log("cards don't match");
+            console.log("cards don't match")
         }
         if (matches == total_possible_matches) {
             //all matches have been made
             //all matched cards disappear
             $('#game-area').find('.card').addClass('hide_matched_cards');
-
             //adds You Won message after game_area has been cleared
             $("#game-area").append($("<h5>").html("You won the <span>Piston Cup!</span>"));
         }
         display_stats();
     }
-    if(attempts==15) {
+    if(attempts === 25) {
         $("#game-area").append($("<h5>").html("You were too slow!"));
         $("body").css("background-image", "url(images/dark4.png)");
         $('#game-area').find('.card').addClass('hide_matched_cards');
@@ -162,14 +154,14 @@ function reset_stats() {
     $('#game-area').find('.card').removeClass('hide_matched_cards');
     $('.card').find('.back').removeClass('matched_card');
     $("h5").remove();
-    //resets background to daytime picture
-    //$("body").css("background-image", "url(images/cars_28.jpg)");//
-    difficultly="easy";
+    seconds=45;
+    clearInterval(timer);
+    $("#counter").empty();
 }
-
-//takes all front image urls and stores in array
-
-//returns fractional numbers between 0-18
+function addNewContainer(){
+    reset_stats();
+    $(".container").removeClass("container2");
+}
 function random_pictures() {
     var pics_array = ["images/fillmore.jpg",
         "images/flo.jpg",
@@ -187,6 +179,7 @@ function random_pictures() {
             new_pics_array = new_pics_array.concat(new_pics_array);
             card = 8;
             total_possible_matches = 4;
+            $("body").css("background-image", "url(images/cars_28.jpg)");
             console.log(new_pics_array);
             break;
         case "medium":
@@ -194,6 +187,7 @@ function random_pictures() {
             new_pics_array=new_pics_array.concat(new_pics_array);
             card=12;
             total_possible_matches=6;
+            $("body").css("background-image", "url(images/dark2.png)");
             console.log(new_pics_array);
             break;
         case "difficult":
@@ -201,6 +195,7 @@ function random_pictures() {
             new_pics_array = new_pics_array.concat(new_pics_array);
             card = 18;
             total_possible_matches = 9;
+            $("body").css("background-image", "url(images/dark4.png)");
             console.log(new_pics_array);
             break;
     }
@@ -210,24 +205,17 @@ function random_pictures() {
         create_card_con(new_pics_array[random_i]);
         i++;
         new_pics_array.splice(random_i,1);
-    console.log("random pics");
     }
     console.log(difficulty);
 }
 
 function create_card_con(random_picture) {
-
     //jquery objects for dynamic board
     var card_div = $("<div>").addClass("card");
-
     var front_div = $("<div>").addClass("front");
-
     var back_div = $("<div>").addClass("back").attr("onclick", "card_clicked(this)");
-
     var img_front = $("<img>").addClass("front").attr("src", random_picture);
-
     var img_back = $("<img>").addClass("back").attr("src", "images/radiatorspringscard.jpg");
-
     front_div.append(img_front);
     back_div.append(img_back);
     card_div.append(front_div);
@@ -235,19 +223,18 @@ function create_card_con(random_picture) {
     $(".container").append(card_div);
 }
 function countdown() {
+    var counter = document.getElementById("counter");
     var seconds = 45;
-    function tick() {
-        var counter = document.getElementById("counter");
+    var decrement = function(){
         seconds--;
         counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
-        if( seconds > 0 ) {
-            setTimeout(tick, 1000);
-        } else {
-            $("#game-area").append($("<h5>").html("Sheriff took you to jail!"));
+        if(seconds === 0){
+            clearInterval(timer);
+            $('#game-area').append($("<h5>").html("Sheriff took you to jail!"));
             $('#game-area').find('.card').addClass('hide_matched_cards');
-            $("#counter").remove();
+            $("#counter").empty();
         }
-    }
-    tick();
+    };
+    if(!timer) clearInterval(timer);
+    timer = setInterval(decrement, 1000);
 }
-
