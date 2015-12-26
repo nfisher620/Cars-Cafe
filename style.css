@@ -7,6 +7,7 @@
     font-size:20px;
     margin-right:20px;
     width:78vw;
+    top:10vh;
 }
 
 a{
@@ -199,15 +200,10 @@ button{
     visibility: hidden;
 }
 
-audio{
-    width:44px;
-    height:3px;
-    position:relative;
-    margin-right:92px;
-}
 #reset {
-    left:25px;
-    margin-top:4px;
+    position:relative;
+    top:8vh;
+    left:-25.5vw;
 }
 
 .container2 {
@@ -229,12 +225,6 @@ h6 {
     visibility: hidden;
     position:absolute;
 }
-
-.rascalFlatts:hover{
-    color:red;
-    cursor: pointer;
-}
-
 @-webkit-keyframes neon1 {
     from {
              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -425,4 +415,10 @@ h6 {
     .container{
         width:179vw;
     }
+}
+
+button:active{
+    background-color:transparent;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+
 }

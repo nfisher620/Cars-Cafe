@@ -23,16 +23,18 @@ $(document).ready(function () {
 //button for easy game mode
 function easy(){
     difficulty="easy";
-    addNewContainer();
+    addNewGameBoard();
     blazes.play();
+    $('.easy_button').addClass('glow');
 }
 
-//button for medium game ma
+//button for medium game mode
 function medium(){
     difficulty="medium";
-    addNewContainer();
+    addNewGameBoard();
     mater.play();
 }
+//button for difficult game mode
 function difficult (){
     difficulty="difficult";
     reset_stats();
@@ -41,25 +43,6 @@ function difficult (){
     sheriff.play();
 
 }
-function rf() {
-    $(".rascalFlatts").toggle(
-        function () {
-            $(".rascalFlatts").html("Racing Music");
-           $('#lifeHighway').play();
-            console.log("play");
-        },
-        function () {
-            $(".rascalFlatts").html("Pause Music");
-            $('#lifeHighway').pause();
-        }
-    );
-
-}
-
-
-
-
-
 function card_clicked(element) {
     //check if you can click on a card
     if (can_i_click_a_card == true) {
@@ -76,7 +59,7 @@ function card_clicked(element) {
         first_card_clicked = the_card;
         //the front image of the first card is visible
         $(element).addClass("selected_card");
-        console.log("card is first");
+        console.log("first card");
     }
     else {
         //we clicked the second card
@@ -84,7 +67,7 @@ function card_clicked(element) {
         attempts=attempts + 1;
         //the front image of the second card is visible
         $(element).addClass("selected_card");
-        console.log("card is second");
+        console.log("second card");
 
         if (first_card_clicked == second_card_clicked) {
             //there is a match
@@ -121,6 +104,7 @@ function card_clicked(element) {
             $('#game-area').find('.card').addClass('hide_matched_cards');
             //adds You Won message after game_area has been cleared
             $("#game-area").append($("<h5>").html("You won the <span>Piston Cup!</span>"));
+            games_played = games_played + 1;
         }
         display_stats();
     }
@@ -157,7 +141,7 @@ function reset_stats() {
     accuracy = 0;
     matches = 0;
     attempts = 0;
-    games_played = games_played + 1;
+    //games_played = games_played + 1;
     //removes cards from game_area
     $(".container").html("");
     //adds new random cards to game_area
@@ -174,7 +158,7 @@ function reset_stats() {
     clearInterval(timer);
     $("#counter").empty();
 }
-function addNewContainer(){
+function addNewGameBoard(){
     reset_stats();
     $(".container").removeClass("container2");
 }
@@ -192,6 +176,7 @@ function random_pictures() {
     switch(difficulty) {
         case "easy":
             var new_pics_array = pics_array.slice(0, 4);
+            //adds the second image instead of doubling the images in the pics_array
             new_pics_array = new_pics_array.concat(new_pics_array);
             card = 8;
             total_possible_matches = 4;
@@ -226,7 +211,7 @@ function random_pictures() {
 }
 
 function create_card_con(random_picture) {
-    //jquery objects for dynamic board
+    //jquery objects for dynamic board creation
     var card_div = $("<div>").addClass("card");
     var front_div = $("<div>").addClass("front");
     var back_div = $("<div>").addClass("back").attr("onclick", "card_clicked(this)");
@@ -254,3 +239,4 @@ function countdown() {
     if(!timer) clearInterval(timer);
     timer = setInterval(decrement, 1000);
 }
+
