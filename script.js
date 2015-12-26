@@ -19,15 +19,14 @@ $(document).ready(function () {
     $("games_played").find(".value").text(0);
     random_pictures();
     console.log("ready");
+    addGlow();
 });
 //button for easy game mode
-function easy(){
-    difficulty="easy";
+function easy() {
+    difficulty = "easy";
     addNewGameBoard();
     blazes.play();
-    $('.easy_button').addClass('glow');
 }
-
 //button for medium game mode
 function medium(){
     difficulty="medium";
@@ -59,7 +58,7 @@ function card_clicked(element) {
         first_card_clicked = the_card;
         //the front image of the first card is visible
         $(element).addClass("selected_card");
-        console.log("first card");
+        console.log("The first card is ", the_card);
     }
     else {
         //we clicked the second card
@@ -67,7 +66,7 @@ function card_clicked(element) {
         attempts=attempts + 1;
         //the front image of the second card is visible
         $(element).addClass("selected_card");
-        console.log("second card");
+        console.log("The second card is ", the_card);
 
         if (first_card_clicked == second_card_clicked) {
             //there is a match
@@ -96,7 +95,7 @@ function card_clicked(element) {
                 $(".selected_card").removeClass("selected_card");
                 can_i_click_a_card = true;
             }, 1050);
-            console.log("cards don't match")
+            console.log("Cards don't match")
         }
         if (matches == total_possible_matches) {
             //all matches have been made
@@ -240,6 +239,16 @@ function countdown() {
     timer = setInterval(decrement, 1000);
 }
 
-$('button').on('click', function() {
-        $(this).addClass("glow");
-});
+function addGlow() {
+    $('#extras').find('button').on('click', function () {
+        $('button').removeClass("glow");
+        $(this).toggleClass("glow");
+    })
+}
+
+//function addGlow() {
+//    $('button').on('click', function () {
+//        $('button').removeClass("glow");
+//        $(this).toggleClass("glow");
+//    })
+//}

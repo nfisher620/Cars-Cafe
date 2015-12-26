@@ -1,5 +1,5 @@
 .glow{
-    animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 .5s ease-in-out infinite alternate;
 }
 #extras{
     display:inline-block;
