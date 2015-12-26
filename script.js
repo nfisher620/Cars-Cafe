@@ -240,3 +240,6 @@ function countdown() {
     timer = setInterval(decrement, 1000);
 }
 
+$('button').on('click', function() {
+        $(this).addClass("glow");
+});
