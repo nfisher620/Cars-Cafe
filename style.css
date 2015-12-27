@@ -327,7 +327,7 @@ button{
 }
 
 
-@media screen and (min-width:730px) and (max-width:1130px){
+@media screen and (min-width:728px) and (max-width:1130px){
     .container{
         width:53vw;
     }
@@ -359,6 +359,15 @@ button{
     }
     h3{
         font-size:100%;
+    }
+    h5{
+        font-size:4em;
+        top:-5vh;
+    }
+    span{
+        font-size: 1em;
+        left: 10vw;
+        top: 6vh;
     }
     .value{
         font-size:1.2em;
@@ -396,7 +405,7 @@ button{
     }
 }
 
-@media screen and (min-width:485px) and (max-width:728px){
+@media screen and (min-width:486px) and (max-width:728px){
     h1{
         display:none;
     }
@@ -436,8 +445,17 @@ button{
         left: 28vw;
         top: 41vh;
     }
+    h5{
+        font-size:4em;
+        top:-5vh;
+    }
+    span{
+        font-size: 1em;
+        left: 27vw;
+        top: 6vh;
+    }
 }
-@media screen and (min-width:465px) and (max-width:561px){
+@media screen and (min-width:472px) and (max-width:561px){
     h1{
         display:none;
     }
@@ -469,7 +487,13 @@ button{
         height: 14vh;
     }
     h5{
-        font-size:3em;
+        font-size:4em;
+        top:-5vh;
+    }
+    span{
+        font-size: 1em;
+        left: 27vw;
+        top: 6vh;
     }
     #counter {
         color: whitesmoke;
@@ -480,11 +504,11 @@ button{
         height: 9vh;
         position: relative;
         float: right;
-        left: -19vw;
+        left: -13vw;
         top: 50vh;
     }
 }
-@media screen and (min-width:0px) and (max-width:464px){
+@media screen and (min-width:433px) and (max-width:485px){
     h1{
         display:none;
     }
@@ -496,7 +520,6 @@ button{
     #extras {
         top: -5vh;
         width: 95vw;
-        background-color:blue;
     }
     .stats{
         height:5vh;
@@ -515,24 +538,69 @@ button{
         width: 10vw;
     }
     h5{
-        font-size:3em;
+        font-size:4em;
+        top:-5vh;
+    }
+    span{
+        font-size: 1em;
+        left: 27vw;
+        top: 6vh;
     }
     button{
         margin:0;
     }
     #counter{
-    color: whitesmoke;
-        font-size: 100px;
-        font-family: "Marck Script", cursive;
-        text-shadow: 7px 7px 7px red;
-        width: 9vw;
-        height: 9vh;
-        position: relative;
-        float: right;
-        left: -19vw;
-        top: 289px;
+        font-size: 62px;
+        left: -13vw;
+        top: 45vh;
     }
 }
+@media screen and (min-width:0px) and (max-width:432px){
+    h1{
+        display:none;
+    }
+    #reset {
+        top: -19vh;
+    }
+    #extras {
+        top: -15vh;
+        width: 95vw;
+    }
+    .stats{
+        height:5vh;
+        width:105vw;
+    }
+    .value {
+        font-size: 1em;
+    }
+    .container2{
+        width:80vw;
+    }
+    .container {
+        width: 90vw;
+    }
+    .card {
+        width: 10vw;
+    }
+    h5{
+        font-size:4em;
+        top:-5vh;
+    }
+    button{
+        margin:0;
+    }
+    #counter{
+        font-size: 61px;
+        left: 20vw;
+        top: 27vh;
+    }
+    span{
+        font-size: 1em;
+        left: 27vw;
+        top: 6vh;
+    }
+}
+
 /*@media only screen and (max-width: 376px) {*/
     /*body {*/
         /*background: black;*/
