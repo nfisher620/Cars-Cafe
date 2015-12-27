@@ -601,24 +601,24 @@ button{
     }
 }
 
-/*@media only screen and (max-width: 376px) {*/
-    /*body {*/
-        /*background: black;*/
-    /*}*/
-    /*h1{*/
-        /*display:none;*/
-    /*}*/
-    /*#game-area{*/
-        /*width:50vw;*/
-    /*}*/
-    /*.stats{*/
-        /*width:128vw;*/
-        /*margin-top:19vh;*/
-    /*}*/
-    /*.card{*/
-        /*width:26%;*/
-    /*}*/
-    /*.container{*/
-        /*width:179vw;*/
-    /*}*/
-/*}*/
+/* Mobile */
+@media only screen and (max-width: 376px) {
+    .container{
+        width:92vw;
+    }
+    .stats{
+        width:99vw;
+    }
+    #extras {
+        top: -22vh;
+        width: 100vw;
+        margin-left: 0;
+    }
+    #reset{
+        top:-21vh;
+        left:-4vw;
+    }
+
+}
+
+
