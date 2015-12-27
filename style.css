@@ -211,7 +211,7 @@ button{
 }
 
 .container2 {
-    width: 64vw;
+    width: 65vw;
 }
 #counter {
     color: whitesmoke;
@@ -361,7 +361,7 @@ button{
         font-size:100%;
     }
     .value{
-        font-size:3vw;
+        font-size:1.2em;
     }
     .front{
             height:100%;
@@ -382,6 +382,18 @@ button{
     .container2{
         width:77vw;
     }
+    #counter {
+        color: whitesmoke;
+        font-size: 100px;
+        font-family: "Marck Script", cursive;
+        text-shadow: 7px 7px 7px red;
+        width: 9vw;
+        height: 9vh;
+        position: relative;
+        float: right;
+        left: 28vw;
+        top: 41vh;
+    }
 }
 
 @media screen and (min-width:485px) and (max-width:728px){
@@ -389,7 +401,7 @@ button{
         display:none;
     }
     .value{
-        font-size:3vw;
+        font-size:1.2em;
     }
     #extras{
         position:absolute;
@@ -397,7 +409,7 @@ button{
         width:92vw;
     }
     .stats{
-        width:82vw;
+        width:83vw;
     }
     #reset {
         position: relative;
@@ -412,57 +424,64 @@ button{
     .card{
         width:13vw;
     }
+    #counter {
+        color: whitesmoke;
+        font-size: 100px;
+        font-family: "Marck Script", cursive;
+        text-shadow: 7px 7px 7px red;
+        width: 9vw;
+        height: 9vh;
+        position: relative;
+        float: right;
+        left: 28vw;
+        top: 41vh;
+    }
 }
-@media screen and (min-width:465px) and (max-width:554px){
+@media screen and (min-width:465px) and (max-width:561px){
     h1{
         display:none;
     }
     #reset {
         position: relative;
-        top: -14vh;
+        top: -5vh;
     }
     .stats{
-        background-color:red;
-    }
-    .body{
-        background-color:yellow;
+        width:94vw;
     }
     #extras {
-        display: inline-block;
-        position: relative;
-        left: 0px;
-        bottom: 0px;
-        margin-left: 15px;
-        font-size: 20px;
-        margin-right: 20px;
-        width: 78vw;
-        top: -22vh;
+        top: 27vh;
+        width:106vw;
     }
     .value {
-        background-color: transparent;
-        color: white;
-        font-size: 3vw;
-        display: block;
-        margin-left: -49px;
-        margin-right: -11px;
+        font-size: 1em;
+        position: relative;
+        top: -3vh;
     }
     .container2{
         width:80vw;
     }
     .container {
-        width: 82vw;
+        width: 100vw;
         height: 40vh;
     }
     .card {
-        width: 16vw;
+        width: 12vw;
         height: 14vh;
-        display: inline-block;
-        position: relative;
-        border: 5px ridge white;
-        margin: 5px;
     }
     h5{
         font-size:3em;
+    }
+    #counter {
+        color: whitesmoke;
+        font-size: 50px;
+        font-family: "Marck Script", cursive;
+        text-shadow: 7px 7px 7px red;
+        width: 9vw;
+        height: 9vh;
+        position: relative;
+        float: right;
+        left: -19vw;
+        top: 50vh;
     }
 }
 @media screen and (min-width:0px) and (max-width:464px){
@@ -471,45 +490,47 @@ button{
     }
     #reset {
         position: relative;
-        top: -22vh;
-        left: 39vw;
-    }
-    .stats{
-        background-color:yellow;
+        top: -4vh;
+        left: 0vw;
     }
     #extras {
-        top: -30vh;
+        top: -5vh;
+        width: 95vw;
+        background-color:blue;
+    }
+    .stats{
+        height:5vh;
+        width:105vw;
     }
     .value {
-        background-color: transparent;
-        color: white;
-        font-size: 3vw;
-        display: block;
-        margin-left: -49px;
-        margin-right: -11px;
+        font-size: 1em;
     }
     .container2{
         width:80vw;
     }
     .container {
-        width: 82vw;
-        height: 40vh;
+        width: 88vw;
     }
     .card {
-        width: 16vw;
-        height: 14vh;
-        display: inline-block;
-        position: relative;
-        border: 5px ridge white;
-        margin: 5px;
+        width: 10vw;
     }
     h5{
         font-size:3em;
     }
+    button{
+        margin:0;
+    }
     #counter{
-        background-color:blue;
-        position:relative;
-
+    color: whitesmoke;
+        font-size: 100px;
+        font-family: "Marck Script", cursive;
+        text-shadow: 7px 7px 7px red;
+        width: 9vw;
+        height: 9vh;
+        position: relative;
+        float: right;
+        left: -19vw;
+        top: 289px;
     }
 }
 /*@media only screen and (max-width: 376px) {*/
