@@ -230,6 +230,7 @@ function countdown() {
             $('#game-area').append($("<h5>").html("Sheriff took you to jail!"));
             $('#game-area').find('.card').addClass('hide_matched_cards');
             $("#counter").empty();
+            games_played = games_played + 1;
         }
     };
     if(!timer) clearInterval(timer);
