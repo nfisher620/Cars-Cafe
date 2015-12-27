@@ -361,7 +361,7 @@ button{
         font-size:100%;
     }
     .value{
-        font-size:2vw;
+        font-size:3vw;
     }
     .front{
             height:100%;
@@ -384,8 +384,133 @@ button{
     }
 }
 
-@media screen and (min-width:400px) and (max-width:599px){
+@media screen and (min-width:485px) and (max-width:728px){
+    h1{
+        display:none;
+    }
+    .value{
+        font-size:3vw;
+    }
+    #extras{
+        position:absolute;
+        top:26vh;
+        width:92vw;
+    }
+    .stats{
+        width:82vw;
+    }
+    #reset {
+        position: relative;
+        top: -5vh;
+    }
+    .container2{
+        width:85vw;
+    }
+    .container{
+        width:100vw;
+    }
+    .card{
+        width:13vw;
+    }
+}
+@media screen and (min-width:465px) and (max-width:554px){
+    h1{
+        display:none;
+    }
+    #reset {
+        position: relative;
+        top: -14vh;
+    }
+    .stats{
+        background-color:red;
+    }
+    .body{
+        background-color:yellow;
+    }
+    #extras {
+        display: inline-block;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-left: 15px;
+        font-size: 20px;
+        margin-right: 20px;
+        width: 78vw;
+        top: -22vh;
+    }
+    .value {
+        background-color: transparent;
+        color: white;
+        font-size: 3vw;
+        display: block;
+        margin-left: -49px;
+        margin-right: -11px;
+    }
+    .container2{
+        width:80vw;
+    }
+    .container {
+        width: 82vw;
+        height: 40vh;
+    }
+    .card {
+        width: 16vw;
+        height: 14vh;
+        display: inline-block;
+        position: relative;
+        border: 5px ridge white;
+        margin: 5px;
+    }
+    h5{
+        font-size:3em;
+    }
+}
+@media screen and (min-width:0px) and (max-width:464px){
+    h1{
+        display:none;
+    }
+    #reset {
+        position: relative;
+        top: -22vh;
+        left: 39vw;
+    }
+    .stats{
+        background-color:yellow;
+    }
+    #extras {
+        top: -30vh;
+    }
+    .value {
+        background-color: transparent;
+        color: white;
+        font-size: 3vw;
+        display: block;
+        margin-left: -49px;
+        margin-right: -11px;
+    }
+    .container2{
+        width:80vw;
+    }
+    .container {
+        width: 82vw;
+        height: 40vh;
+    }
+    .card {
+        width: 16vw;
+        height: 14vh;
+        display: inline-block;
+        position: relative;
+        border: 5px ridge white;
+        margin: 5px;
+    }
+    h5{
+        font-size:3em;
+    }
+    #counter{
+        background-color:blue;
+        position:relative;
 
+    }
 }
 /*@media only screen and (max-width: 376px) {*/
     /*body {*/

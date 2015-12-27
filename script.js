@@ -113,9 +113,6 @@ function card_clicked(element) {
         $('#game-area').find('.card').addClass('hide_matched_cards');
         lights.play();
     }
-    if(matches==4){
-        wake_up.play();
-    }
     if(matches==6){
         fillmore.play();
     }
@@ -153,7 +150,7 @@ function reset_stats() {
     $('#game-area').find('.card').removeClass('hide_matched_cards');
     $('.card').find('.back').removeClass('matched_card');
     $("h5").remove();
-    seconds=46;
+    seconds=31;
     clearInterval(timer);
     $("#counter").empty();
 }
@@ -224,7 +221,7 @@ function create_card_con(random_picture) {
 }
 function countdown() {
     var counter = document.getElementById("counter");
-    var seconds = 46;
+    var seconds = 31;
     var decrement = function(){
         seconds--;
         counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
