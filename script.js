@@ -153,7 +153,7 @@ function reset_stats() {
     $('#game-area').find('.card').removeClass('hide_matched_cards');
     $('.card').find('.back').removeClass('matched_card');
     $("h5").remove();
-    seconds=45;
+    seconds=46;
     clearInterval(timer);
     $("#counter").empty();
 }
@@ -224,7 +224,7 @@ function create_card_con(random_picture) {
 }
 function countdown() {
     var counter = document.getElementById("counter");
-    var seconds = 45;
+    var seconds = 46;
     var decrement = function(){
         seconds--;
         counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
@@ -239,16 +239,10 @@ function countdown() {
     timer = setInterval(decrement, 1000);
 }
 
+//When difficulty button is clicked, title glows//
 function addGlow() {
     $('#extras').find('button').on('click', function () {
         $('button').removeClass("glow");
         $(this).toggleClass("glow");
     })
 }
-
-//function addGlow() {
-//    $('button').on('click', function () {
-//        $('button').removeClass("glow");
-//        $(this).toggleClass("glow");
-//    })
-//}

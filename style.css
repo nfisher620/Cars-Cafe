@@ -10,7 +10,7 @@
     font-size:20px;
     margin-right:20px;
     width:78vw;
-    top:10vh;
+    top:-3vh;
 }
 
 a{
@@ -72,7 +72,7 @@ span{
     -webkit-animation: blink .01s infinite alternate;
 }
 .container{
-    width:49vw;
+    width:52vw;
     height:40vh;
 }
 body{
@@ -85,10 +85,9 @@ body{
  }
 .stats{
      display:inline-block;
-     position:absolute;
-     top:57vh;
-     width:63vw;
-     height:3vh;
+     position:relative;
+     top:5vh;
+     width:78vw;
  }
 .stats div{
     display:inline-block;
@@ -184,10 +183,13 @@ button{
      left:0px;
      z-index: -5;
  }
+.hidden{
+    visibility: hidden;
+}
 .value{
     background-color: transparent;
     color:white;
-    font-size:25px;
+    font-size:2vw;
     display: block;
     margin-left:-49px;
     margin-right:-11px;
@@ -205,8 +207,7 @@ button{
 
 #reset {
     position:relative;
-    top:8vh;
-    left:-25.5vw;
+    top:-5vh;
 }
 
 .container2 {
@@ -223,10 +224,6 @@ button{
     float:right;
     left:473px;
     top:289px;
-}
-h6 {
-    visibility: hidden;
-    position:absolute;
 }
 @-webkit-keyframes neon1 {
     from {
@@ -331,10 +328,16 @@ h6 {
 
 
 @media screen and (min-width:730px) and (max-width:1130px){
+    .container{
+        width:53vw;
+    }
+    h1{
+       display:none;
+    }
     .stats{
         display:inline-block;
         position:relative;
-        width:49vw;
+        width:79vw;
         top:2vh;
     }
     .stats div{
@@ -350,11 +353,6 @@ h6 {
         width:71vw;
         top:2vh;
         display: inline-block;
-    }
-    #reset{
-        left:25px;
-        height:13vh;
-        width:49vw;
     }
     h2 {
         font-size: 124%;
@@ -387,35 +385,26 @@ h6 {
 }
 
 @media screen and (min-width:400px) and (max-width:599px){
-    #game-area{
-        display:none;
-    }
-}
-@media only screen and (max-width: 376px) {
-    body {
-        background: black;
-    }
 
-    h6 {
-        color: white;
-        font-size: 77px;
-        position: relative;
-        visibility: visible;
-    }
-    h1{
-        display:none;
-    }
-    #game-area{
-        width:50vw;
-    }
-    .stats{
-        width:128vw;
-        margin-top:19vh;
-    }
-    .card{
-        width:26%;
-    }
-    .container{
-        width:179vw;
-    }
 }
+/*@media only screen and (max-width: 376px) {*/
+    /*body {*/
+        /*background: black;*/
+    /*}*/
+    /*h1{*/
+        /*display:none;*/
+    /*}*/
+    /*#game-area{*/
+        /*width:50vw;*/
+    /*}*/
+    /*.stats{*/
+        /*width:128vw;*/
+        /*margin-top:19vh;*/
+    /*}*/
+    /*.card{*/
+        /*width:26%;*/
+    /*}*/
+    /*.container{*/
+        /*width:179vw;*/
+    /*}*/
+/*}*/

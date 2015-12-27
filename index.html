@@ -9,7 +9,6 @@
     <script src="script.js"></script>
 </head>
 <body>
-<h6>Not recommended to play on mobile but can be played below</h6>
 <div id="game-area">
    <div class="container">
  <!--       <div class="card">
@@ -166,26 +165,25 @@
 <div class="stats">
     <div class="games-played">
         <h2 class="label">Games Played</h2>
-
         <p class="value"></p>
     </div>
     <div class="attempts">
         <h2 class="label">Attempts</h2>
-
         <p class="value"></p>
     </div>
     <div class="accuracy">
         <h2 class="label">Accuracy</h2>
-
         <p class="value"></p>
     </div>
     <div id ="reset">
+        <button class="hidden"></button>
         <button class="reset" onclick="reset_stats(display_stats())">Reset Game</button>
+        <button class="hidden"></button>
     </div>
     <div id="extras">
-        <button class="easy_button"onclick="easy()">Easy</button>
-        <button class="medium_button" onclick="medium()">Medium</button>
-        <button class="difficult_button"onclick="difficult();">Difficult</button>
+        <button onclick="easy()">Easy</button>
+        <button onclick="medium()">Medium</button>
+        <button onclick="difficult();">Difficult</button>
     </div>
     <audio id="blazes"><source src="images/blueblazes.m4r"></audio>
     <audio id="sheriff"><source src="images/heapoftrouble.m4r"></audio>
