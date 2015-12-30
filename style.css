@@ -96,7 +96,7 @@ body{
     bottom:0px;
     margin-left:15px;
     font-size:20px;
-    margin-right:1.7vw;
+    margin-right:17px;
 }
 #game-area{
     height: 65vh;
@@ -352,7 +352,7 @@ button{
     }
     #difficultyButton{
         width:71vw;
-        top:2vh;
+        top:-2vh;
         display: inline-block;
     }
     h2 {
@@ -393,10 +393,6 @@ button{
         width:77vw;
     }
     #counter {
-        color: whitesmoke;
-        font-size: 100px;
-        font-family: "Marck Script", cursive;
-        text-shadow: 7px 7px 7px red;
         width: 9vw;
         height: 9vh;
         position: relative;
@@ -407,6 +403,9 @@ button{
 }
 
 @media screen and (min-width:486px) and (max-width:728px){
+    button{
+        margin-right:0px;
+    }
     h1{
         display:none;
     }
@@ -435,10 +434,6 @@ button{
         width:13vw;
     }
     #counter {
-        color: whitesmoke;
-        font-size: 100px;
-        font-family: "Marck Script", cursive;
-        text-shadow: 7px 7px 7px red;
         width: 9vw;
         height: 9vh;
         position: relative;
@@ -454,6 +449,13 @@ button{
         font-size: 1em;
         left: 27vw;
         top: 6vh;
+    }
+    .stats div{
+        margin-right:20px;
+    }
+    h2{
+        margin-right:0px;
+        font-size:117%;
     }
 }
 @media screen and (min-width:472px) and (max-width:561px){
@@ -497,16 +499,16 @@ button{
         top: 6vh;
     }
     #counter {
-        color: whitesmoke;
-        font-size: 50px;
-        font-family: "Marck Script", cursive;
-        text-shadow: 7px 7px 7px red;
         width: 9vw;
         height: 9vh;
         position: relative;
         float: right;
-        left: -13vw;
-        top: 50vh;
+        left: -22vw;
+        top: 48vh;
+        font-size:64px;
+    }
+    .stats div{
+        margin-right:10px;
     }
 }
 @media screen and (min-width:433px) and (max-width:485px){
@@ -548,15 +550,18 @@ button{
         top: 6vh;
     }
     button{
-        margin:0;
+        margin:6px;
     }
     #counter{
         font-size: 62px;
         left: -13vw;
         top: 45vh;
     }
+    h2{
+        font-size:107%;
+    }
 }
-@media screen and (min-width:0px) and (max-width:432px){
+@media screen and (min-width:377px) and (max-width:432px){
     h1{
         display:none;
     }
@@ -592,8 +597,69 @@ button{
     }
     #counter{
         font-size: 61px;
-        left: 20vw;
-        top: 27vh;
+        left: -12vw;
+        top: 46vh;
+    }
+    span{
+        font-size: 1em;
+        left: 27vw;
+        top: 6vh;
+    }
+    h2{
+        font-size:89%;
+    }
+}
+/*/!* Mobile *!/*/
+@media only screen and (max-width: 376px) {
+    .container{
+    width:92vw;
+    }
+    .stats{
+    width:99vw;
+    }
+    #difficultyButton {
+    top: -4vh;
+    width: 100vw;
+    margin-left: 0;
+    }
+    #reset{
+    top:-21vh;
+    left:-4vw;
+    }
+    h1{
+        display:none;
+    }
+    #reset {
+        top: -5vh;
+        left:-1vw;
+    }
+    .stats{
+        height:5vh;
+        width:105vw;
+    }
+    .value {
+        font-size: 1em;
+    }
+    .container2{
+        width:92vw;
+    }
+    .card {
+        width: 10vw;
+    }
+    h5{
+        font-size:3em;
+        top:-5vh;
+    }
+    button{
+        margin:0;
+    }
+    .stats div{
+        margin-left:3px;
+    }
+    #counter{
+        font-size: 61px;
+        left: -14vw;
+        top: 48vh;
     }
     span{
         font-size: 1em;
@@ -605,24 +671,28 @@ button{
     }
 }
 
-/* Mobile */
-@media only screen and (max-width: 376px) {
-    .container{
-        width:92vw;
-    }
-    .stats{
-        width:99vw;
-    }
-    #difficultyButton {
-        top: -22vh;
-        width: 100vw;
-        margin-left: 0;
-    }
-    #reset{
-        top:-21vh;
-        left:-4vw;
-    }
 
-}
+
+
+
+/* Mobile */
+/*@media only screen and (max-width: 376px) {*/
+    /*.container{*/
+        /*width:92vw;*/
+    /*}*/
+    /*.stats{*/
+        /*width:99vw;*/
+    /*}*/
+    /*#difficultyButton {*/
+        /*top: -22vh;*/
+        /*width: 100vw;*/
+        /*margin-left: 0;*/
+    /*}*/
+    /*#reset{*/
+        /*top:-21vh;*/
+        /*left:-4vw;*/
+    /*}*/
+
+/*}*/
 
 

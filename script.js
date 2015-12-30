@@ -121,11 +121,11 @@ function card_clicked(element) {
     }
     // Plays sound after 6 matches made
     if(matches==6){
-        fillmore.play();
+        fun.play();
     }
     // Plays sound after 9 matches made
     if(matches==9){
-        fun.play();
+        fillmore.play();
     }
 }
 
