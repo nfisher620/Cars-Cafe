@@ -1,7 +1,7 @@
 .glow{
     animation: neon1 .5s ease-in-out infinite alternate;
 }
-#extras{
+#difficultyButton{
     display:inline-block;
     position:relative;
     left:0px;
@@ -149,15 +149,15 @@ h4 {
      margin:0px;
      padding-top:5px;
  }
-.block{
-     float:left;
-     width:375px;
-     height:150px;
-     background-color:#e74c3c;
-     margin: -3px 55px 0px 75px;
-     border:5px outset black;
-     box-shadow: 10px 10px,-10px -10px #f4f4f4, 0px 0px 5px 5px
- }
+/*.block{*/
+     /*float:left;*/
+     /*width:375px;*/
+     /*height:150px;*/
+     /*background-color:#e74c3c;*/
+     /*margin: -3px 55px 0px 75px;*/
+     /*border:5px outset black;*/
+     /*box-shadow: 10px 10px,-10px -10px #f4f4f4, 0px 0px 5px 5px*/
+ /*}*/
 button{
      background:url(images/logo.png);
      color:white;
@@ -295,7 +295,7 @@ button{
         font-size:20px;
         margin-right:20px;
     }
-    #extras{
+    #difficultyButton{
         width:75vw;
         height:75vh;
         display: inline-block;
@@ -350,7 +350,7 @@ button{
         font-size:20px;
         margin-right:20px;
     }
-    #extras{
+    #difficultyButton{
         width:71vw;
         top:2vh;
         display: inline-block;
@@ -413,7 +413,7 @@ button{
     .value{
         font-size:1.2em;
     }
-    #extras{
+    #difficultyButton{
         position:absolute;
         top:26vh;
         width:92vw;
@@ -467,7 +467,7 @@ button{
     .stats{
         width:94vw;
     }
-    #extras {
+    #difficultyButton {
         top: 27vh;
         width:106vw;
     }
@@ -518,7 +518,7 @@ button{
         top: -4vh;
         left: 0vw;
     }
-    #extras {
+    #difficultyButton {
         top: -5vh;
         width: 95vw;
     }
@@ -561,10 +561,10 @@ button{
         display:none;
     }
     #reset {
-        top: -19vh;
+        top: -5vh;
     }
-    #extras {
-        top: -15vh;
+    #difficultyButton {
+        top: -4vh;
         width: 95vw;
     }
     .stats{
@@ -600,6 +600,9 @@ button{
         left: 27vw;
         top: 6vh;
     }
+    h2{
+        font-size:104%;
+    }
 }
 
 /* Mobile */
@@ -610,7 +613,7 @@ button{
     .stats{
         width:99vw;
     }
-    #extras {
+    #difficultyButton {
         top: -22vh;
         width: 100vw;
         margin-left: 0;

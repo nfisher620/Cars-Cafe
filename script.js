@@ -98,8 +98,8 @@ function card_clicked(element) {
             console.log("Cards don't match")
         }
         if (matches == total_possible_matches) {
-            //all matches have been made
-            //all matched cards disappear
+            // All matches have been made
+            // All matched cards disappear
             $('#game-area').find('.card').addClass('hide_matched_cards');
             //adds You Won message after game_area has been cleared
             $("#game-area").append($("<h5>").html("You won the <span>Piston Cup!</span>"));
@@ -107,23 +107,29 @@ function card_clicked(element) {
         }
         display_stats();
     }
+    // Displays message after 25 attempts
     if(attempts === 25) {
         $("#game-area").append($("<h5>").html("You were too slow!"));
         $("body").css("background-image", "url(images/dark4.png)");
         $('#game-area').find('.card').addClass('hide_matched_cards');
         lights.play();
     }
+    // Plays sound after 6 matches made
     if(matches==6){
         fillmore.play();
     }
+    // Plays sound after 9 matches made
     if(matches==9){
         fun.play();
     }
 }
+
+// Displays stats area
 function display_stats() {
     $(".games-played").find(".value").text(games_played);
     $(".attempts").find(".value").text(attempts);
     accuracy = Math.floor(((matches/attempts)*100).toFixed(2));
+    // Replaces infintiy with 100
     if (accuracy == Infinity) {
         $(".accuracy").find(".value").text(100 + "%");
     }
@@ -133,31 +139,37 @@ function display_stats() {
 }
 
 function reset_stats() {
-    //resets variables to zero
+    // Resets variables to zero
     accuracy = 0;
     matches = 0;
     attempts = 0;
-    //games_played = games_played + 1;
-    //removes cards from game_area
+    // Removes cards from game_area for random generator
     $(".container").html("");
-    //adds new random cards to game_area
+    //Adds new random cards to game_area
     random_pictures();
-    //adds one to games_played each time reset button is clicked
+    // Updates values under stats area
     $(".games-played").find(".value").text(games_played);
     $(".accuracy").find(".value").text(0 + "%");
     $(".attempts").find(".value").text(0);
+    // Flips cards back to starting position
     $(".back").show();
     $('#game-area').find('.card').removeClass('hide_matched_cards');
     $('.card').find('.back').removeClass('matched_card');
+    // Removes winning/losing game message
     $("h5").remove();
+    // Resets timer
     seconds=31;
     clearInterval(timer);
     $("#counter").empty();
 }
+
+// 2nd container for difficulty board
 function addNewGameBoard(){
     reset_stats();
     $(".container").removeClass("container2");
 }
+
+// Random Cards Generator
 function random_pictures() {
     var pics_array = ["images/fillmore.jpg",
         "images/flo.jpg",
@@ -169,10 +181,11 @@ function random_pictures() {
         "images/sally.jpg",
         "images/sarge.jpg"];
 
+    // Switches between easy, medium, difficulty
     switch(difficulty) {
         case "easy":
             var new_pics_array = pics_array.slice(0, 4);
-            //adds the second image instead of doubling the images in the pics_array
+            // Adds the second image in the array instead of doubling the images in the pics_array
             new_pics_array = new_pics_array.concat(new_pics_array);
             card = 8;
             total_possible_matches = 4;
@@ -206,8 +219,9 @@ function random_pictures() {
     console.log(difficulty);
 }
 
+// Dynamic card creation
 function create_card_con(random_picture) {
-    //jquery objects for dynamic board creation
+    // Jquery objects for dynamic board creation
     var card_div = $("<div>").addClass("card");
     var front_div = $("<div>").addClass("front");
     var back_div = $("<div>").addClass("back").attr("onclick", "card_clicked(this)");
@@ -219,6 +233,8 @@ function create_card_con(random_picture) {
     card_div.append(back_div);
     $(".container").append(card_div);
 }
+
+// Countdown timer
 function countdown() {
     var counter = document.getElementById("counter");
     var seconds = 31;
@@ -237,9 +253,9 @@ function countdown() {
     timer = setInterval(decrement, 1000);
 }
 
-//When difficulty button is clicked, title glows//
+//When difficulty button is clicked, title glows
 function addGlow() {
-    $('#extras').find('button').on('click', function () {
+    $('#difficultyButton').find('button').on('click', function () {
         $('button').removeClass("glow");
         $(this).toggleClass("glow");
     })
