@@ -11,7 +11,7 @@ var card=null;
 var seconds=0;
 var timer;
 
-//the page has loaded
+// Page has loaded
 $(document).ready(function () {
     display_stats();
     $(".accuracy").find(".value").text(0 + "%");
@@ -21,19 +21,19 @@ $(document).ready(function () {
     console.log("ready");
     addGlow();
 });
-//button for easy game mode
+// Button for easy game mode
 function easy() {
     difficulty = "easy";
     addNewGameBoard();
     blazes.play();
 }
-//button for medium game mode
+// Button for medium game mode
 function medium(){
     difficulty="medium";
     addNewGameBoard();
     mater.play();
 }
-//button for difficult game mode
+// Button for difficult game mode
 function difficult (){
     difficulty="difficult";
     reset_stats();
@@ -43,9 +43,9 @@ function difficult (){
 
 }
 function card_clicked(element) {
-    //check if you can click on a card
+    // Check if you can click on a card
     if (can_i_click_a_card == true) {
-        //takes the img src from the card that is clicked and set it to variable the_card
+        // Takes the img src from the card that is clicked and sets it to variable the_card
         var the_card = $(element).prev('.front').find('img').attr('src');
         console.log(the_card);
     }
@@ -54,44 +54,48 @@ function card_clicked(element) {
     }
 
     if (first_card_clicked == null) {
-        //we clicked the first card
+        // Clicked the first card
         first_card_clicked = the_card;
-        //the front image of the first card is visible
+        // Front image of the first card is visible
         $(element).addClass("selected_card");
         console.log("The first card is ", the_card);
     }
     else {
-        //we clicked the second card
+        // Clicked the second card
+        // Takes the img src from the card that is clicked and sets it to variable the_card
         second_card_clicked = the_card;
+        // Attempts counter increments
         attempts=attempts + 1;
-        //the front image of the second card is visible
+        // Front image of the second card is visible
         $(element).addClass("selected_card");
         console.log("The second card is ", the_card);
 
         if (first_card_clicked == second_card_clicked) {
-            //there is a match
+            // There is a match
             $(".selected_card").removeClass('selected_card').addClass('matched_card');
-            //resets cards to null
+            // Resets cards to null
             first_card_clicked = null;
             second_card_clicked = null;
-            //increases matches
+            // Increases matches
             matches = matches + 1;
-            console.log("cards match");
+            console.log("Cards match");
+            // Rounds accuracy to two decimal points
             accuracy = Math.round(((matches/attempts)*100).toFixed(2));
         }
         else {
-            //the cards don't match
-            //prevents from clicking on a third card
+            // Cards don't match
+            // Prevents from clicking on a third card
             can_i_click_a_card = false;
-            //resets card to null
+            // Resets card to null
             first_card_clicked = null;
             second_card_clicked = null;
+            // Rounds accuracy to two decimal points
             accuracy = Math.round(((matches/attempts)*100).toFixed(2));
-            //adds one to attempts in the stats area
+            // Adds one to attempts in the stats area
             $(".attempts").find(".value").text(attempts);
-
+            // Time before cards flip back
             setTimeout(function () {
-                //cards flip back
+                //Cards flip back
                 $(".selected_card").removeClass("selected_card");
                 can_i_click_a_card = true;
             }, 1050);
@@ -101,8 +105,9 @@ function card_clicked(element) {
             // All matches have been made
             // All matched cards disappear
             $('#game-area').find('.card').addClass('hide_matched_cards');
-            //adds You Won message after game_area has been cleared
+            // Adds You Won message after game_area has been cleared
             $("#game-area").append($("<h5>").html("You won the <span>Piston Cup!</span>"));
+            // Increments games played counter
             games_played = games_played + 1;
         }
         display_stats();
@@ -129,7 +134,7 @@ function display_stats() {
     $(".games-played").find(".value").text(games_played);
     $(".attempts").find(".value").text(attempts);
     accuracy = Math.floor(((matches/attempts)*100).toFixed(2));
-    // Replaces infintiy with 100
+    // Replaces infinity with 100
     if (accuracy == Infinity) {
         $(".accuracy").find(".value").text(100 + "%");
     }
@@ -145,7 +150,7 @@ function reset_stats() {
     attempts = 0;
     // Removes cards from game_area for random generator
     $(".container").html("");
-    //Adds new random cards to game_area
+    // Adds new random cards to game_area
     random_pictures();
     // Updates values under stats area
     $(".games-played").find(".value").text(games_played);
@@ -195,8 +200,8 @@ function random_pictures() {
         case "medium":
             var new_pics_array=pics_array.slice(0,6);
             new_pics_array=new_pics_array.concat(new_pics_array);
-            card=12;
-            total_possible_matches=6;
+            card = 12;
+            total_possible_matches = 6;
             $("body").css("background-image", "url(images/dark2.png)");
             console.log(new_pics_array);
             break;
@@ -250,10 +255,11 @@ function countdown() {
         }
     };
     if(!timer) clearInterval(timer);
+    // Time between each second
     timer = setInterval(decrement, 1000);
 }
 
-//When difficulty button is clicked, title glows
+// Adds glow to title of difficulty button when pressed
 function addGlow() {
     $('#difficultyButton').find('button').on('click', function () {
         $('button').removeClass("glow");
