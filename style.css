@@ -529,7 +529,7 @@ button{
         width:105vw;
     }
     .value {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .container2{
         width:80vw;
@@ -577,7 +577,7 @@ button{
         width:105vw;
     }
     .value {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .container2{
         width:80vw;
@@ -611,20 +611,17 @@ button{
 }
 /*/!* Mobile *!/*/
 @media only screen and (max-width: 376px) {
-    .container{
-    width:92vw;
-    }
-    .stats{
-    width:99vw;
+    .container {
+        width: 92vw;
     }
     #difficultyButton {
-    top: -4vh;
-    width: 100vw;
-    margin-left: 0;
+        top: -4vh;
+        width: 100vw;
+        margin-left: 0;
     }
     #reset{
-    top:-21vh;
-    left:-4vw;
+        top:-21vh;
+        left:-4vw;
     }
     h1{
         display:none;
@@ -638,7 +635,7 @@ button{
         width:105vw;
     }
     .value {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .container2{
         width:92vw;
@@ -652,9 +649,11 @@ button{
     }
     button{
         margin:0;
+        width:119px;
     }
     .stats div{
-        margin-left:3px;
+        margin-right:0px;
+        margin-left:0px
     }
     #counter{
         font-size: 61px;
@@ -663,8 +662,8 @@ button{
     }
     span{
         font-size: 1em;
-        left: 27vw;
-        top: 6vh;
+        left: 20vw;
+        top: 4vh;
     }
     h2{
         font-size:104%;
