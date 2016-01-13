@@ -275,7 +275,7 @@ span{
 }
 @media only screen and (max-width: 1366px) and (min-width:1277px){
     #reset {
-        left: -37vw;
+        left: 0vw;
     }
 }
 @media screen and (min-width:1130px) and (max-width:1130px){
