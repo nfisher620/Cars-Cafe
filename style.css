@@ -278,6 +278,9 @@ span{
         left: 0vw;
     }
 }
+@media screen and (max-width:320px) and (min-width:1130px){
+
+}
 @media screen and (min-width:1130px) and (max-width:1130px){
     .stats{
         display:inline-block;
@@ -612,6 +615,7 @@ span{
 
 /*/ Mobile /*/
 
+/*Correct */
 @media only screen and (max-width: 376px) {
     .container {
         width: 92vw;
@@ -723,3 +727,141 @@ span{
 /*a:hover{*/
 /*color:red;*/
 /*}*/
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .value{
+        font-size: 16px;
+    }
+    .stats{
+        position:relative;
+        top:7vh;
+    }
+
+}
+
+ /*----------- iPhone 5 and 5S -----------*/
+
+ /*Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    button{
+        width:102px;
+    }
+    .container2{
+        width:99vw;
+    }
+    .container{
+        width:98vw;
+    }
+    h2{
+        font-size:93%;
+    }
+    .value{
+        font-size:20px;
+    }
+    #counter {
+        font-size: 47px;
+        left: -11vw;
+        top: 49vh;
+    }
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        width: 92vw;
+    }
+    #difficultyButton {
+        top: -4vh;
+        width: 100vw;
+        margin-left: 0;
+    }
+    #reset{
+        top:-21vh;
+        left:-4vw;
+    }
+    h1{
+        display:none;
+    }
+    #reset {
+        top: -5vh;
+        left:-1vw;
+    }
+    .stats{
+        height:5vh;
+        width:105vw;
+    }
+    .value {
+        font-size: 1.2em;
+    }
+    .container2{
+        width:92vw;
+    }
+    .card {
+        width: 10vw;
+    }
+    h5{
+        font-size:3em;
+        top:-5vh;
+    }
+    button{
+        margin:0;
+        width:119px;
+    }
+    .stats div{
+        margin-right:0px;
+        margin-left:0px
+    }
+    #counter {
+        font-size: 47px;
+        left: -11vw;
+        top: 51vh;
+    }
+    span{
+        font-size: 1em;
+        left: 20vw;
+        top: 4vh;
+    }
+    h2{
+        font-size:111%;
+    }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    button{
+        margin-right:25px;
+    }
+    h2{
+        font-size:124%;
+    }
+    #difficultyButton{
+        top:-4vh;
+    }
+    button{
+        margin-right:15px;
+    }
+    #counter{
+        top:51vh;
+    }
+}
