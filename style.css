@@ -615,119 +615,6 @@ span{
 
 /*/ Mobile /*/
 
-/*Correct */
-@media only screen and (max-width: 376px) {
-    .container {
-        width: 92vw;
-    }
-    #difficultyButton {
-        top: -4vh;
-        width: 100vw;
-        margin-left: 0;
-    }
-    #reset{
-        top:-21vh;
-        left:-4vw;
-    }
-    h1{
-        display:none;
-    }
-    #reset {
-        top: -5vh;
-        left:-1vw;
-    }
-    .stats{
-        height:5vh;
-        width:105vw;
-    }
-    .value {
-        font-size: 1.2em;
-    }
-    .container2{
-        width:92vw;
-    }
-    .card {
-        width: 10vw;
-    }
-    h5{
-        font-size:3em;
-        top:-5vh;
-    }
-    button{
-        margin:0;
-        width:119px;
-    }
-    .stats div{
-        margin-right:0px;
-        margin-left:0px
-    }
-    #counter{
-        font-size: 61px;
-        left: -14vw;
-        top: 48vh;
-    }
-    span{
-        font-size: 1em;
-        left: 20vw;
-        top: 4vh;
-    }
-    h2{
-        font-size:104%;
-    }
-}
-/* Mobile */
-/*@media only screen and (max-width: 376px) {*/
-    /*.container{*/
-        /*width:92vw;*/
-    /*}*/
-    /*.stats{*/
-        /*width:99vw;*/
-    /*}*/
-    /*#difficultyButton {*/
-        /*top: -22vh;*/
-        /*width: 100vw;*/
-        /*margin-left: 0;*/
-    /*}*/
-    /*#reset{*/
-        /*top:-21vh;*/
-        /*left:-4vw;*/
-    /*}*/
-
-/*}*/
-
-
-/* CSS for About page removed */
-/*li{*/
-/*list-style-type: none;*/
-/*text-align: center;*/
-/*color: white;*/
-/*font-size: 15px;*/
-/*font-family:tahoma;*/
-/*}*/
-/*h4 {*/
-/*position: relative;*/
-/*text-align: center;*/
-/*color: white;*/
-/*text-shadow: 7px 7px 7px black;*/
-/*font-family: 'Marck Script', cursive;*/
-/*font-size: 25px;*/
-/*margin:0px;*/
-/*padding-top:5px;*/
-/*}*/
-
-/*a{*/
-/*color:white;*/
-/*text-shadow: 7px 7px 7px red;*/
-/*display:inline-block;*/
-/*font-family: 'Marck Script', cursive;*/
-/*font-size:25px;*/
-/*text-decoration: none;*/
-/*margin-left:1vw;*/
-/*}*/
-/*a:hover{*/
-/*color:red;*/
-/*}*/
-
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
@@ -741,6 +628,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .stats{
         position:relative;
         top:7vh;
+    }
+    #counter{
+        font-size:32px;
+        left:-9vw;
+        top:52vh;
+    }
+    #difficultyButton{
+        top:-6vh;
     }
 
 }
@@ -842,6 +737,68 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
+/* ----------- iPhone 6 ----------- */
+@media only screen and (max-width: 376px) {
+    .container {
+        width: 92vw;
+    }
+    #difficultyButton {
+        top: -4vh;
+        width: 100vw;
+        margin-left: 0;
+    }
+    #reset{
+        top:-21vh;
+        left:-4vw;
+    }
+    h1{
+        display:none;
+    }
+    #reset {
+        top: -5vh;
+        left:-1vw;
+    }
+    .stats{
+        height:5vh;
+        width:105vw;
+    }
+    .value {
+        font-size: 1.2em;
+    }
+    .container2{
+        width:92vw;
+    }
+    .card {
+        width: 10vw;
+    }
+    h5{
+        font-size:3em;
+        top:-5vh;
+    }
+    button{
+        margin:0;
+        width:119px;
+    }
+    .stats div{
+        margin-right:0px;
+        margin-left:0px
+    }
+    #counter{
+        font-size: 61px;
+        left: -14vw;
+        top: 48vh;
+    }
+    span{
+        font-size: 1em;
+        left: 20vw;
+        top: 4vh;
+    }
+    h2{
+        font-size:104%;
+    }
+}
+
 /* ----------- iPhone 6+ ----------- */
 
 /* Portrait and Landscape */
@@ -863,5 +820,46 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
     #counter{
         top:51vh;
+    }
+}
+
+/* ----------- iPad ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .card{
+        height:14vh;
+        width:13vw;
+    }
+    .container2{
+        width:95vw;
+    }
+    .container{
+        width:94vw;
+    }
+    #difficultyButton {
+        width: 93vw;
+        top: -22vh;
+    }
+    h2{
+        font-size:39px;
+    }
+    button{
+        font-size:26px;
+        height:13vh;
+        width:181px;
+    }
+    #counter{
+        left:-11vw;
+        top:48vh;
+    }
+    .stats{
+        width:94vw;
+    }
+    .value{
+        font-size:35px;
+    }
+    #reset{
+        top:-8vh;
     }
 }
